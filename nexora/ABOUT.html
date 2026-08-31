@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -283,34 +282,52 @@
 <div class="fixed inset-0 z-[-2] bg-grid-pattern"></div>
 <div class="glow-orb bg-primary/20 w-[500px] h-[500px] top-[-100px] left-[-100px]"></div>
 <div class="glow-orb bg-secondary/15 w-[600px] h-[600px] bottom-[-200px] right-[-100px]" style="animation-delay: -5s;"></div>
-<!-- TopNavBar (Shared Component) -->
+
+<!-- TopNavBar -->
 <header class="bg-surface-dim/60 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 shadow-2xl">
-<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
-<!-- Brand -->
-<div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">
-                NEXORA AI
-            </div>
-<!-- Navigation Links -->
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="home.html">Home</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="AI Tools.html">AI Tools</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="AI Chat.html">AI Chat</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="image.html">Image Studio</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="pricing.html">Pricing</a>
-<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-300 font-body-md text-body-md" href="ABOUT.html">About</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="">Contact</a>
-</nav>
-<!-- Actions -->
-<div class="flex items-center gap-4">
-<button class="text-primary hover:text-primary transition-colors duration-300 font-body-md text-body-md active:scale-95 transition-transform hidden lg:block">
-                    Sign In
-                </button>
-<button class="btn-primary px-6 py-2 rounded-full font-label-sm text-label-sm font-semibold active:scale-95 transition-transform">
-                    Get Started
-                </button>
-</div>
-</div>
+    <div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+        <!-- Brand -->
+        <div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">
+            NEXORA AI
+        </div>
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="home.html">Home</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="AI Tools.html">AI Tools</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="AI Chat.html">AI Chat</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="image.html">Image Studio</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="pricing.html">Pricing</a>
+            <a class="text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-300 font-body-md text-body-md" href="ABOUT.html">About</a>
+            <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="#">Contact</a>
+        </nav>
+        <!-- Actions -->
+        <div class="flex items-center gap-4">
+            <button class="text-primary hover:text-primary transition-colors duration-300 font-body-md text-body-md active:scale-95 transition-transform hidden lg:block">
+                Sign In
+            </button>
+            <button class="btn-primary px-6 py-2 rounded-full font-label-sm text-label-sm font-semibold active:scale-95 transition-transform">
+                Get Started
+            </button>
+            <button class="md:hidden text-primary flex items-center justify-center" onclick="toggleMobileMenu()">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-surface-dim/95 backdrop-blur-xl border-b border-white/10 shadow-2xl flex-col px-6 py-4 gap-4 z-50 md:hidden">
+        <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="home.html">Home</a>
+        <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="AI Tools.html">AI Tools</a>
+        <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="AI Chat.html">AI Chat</a>
+        <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="image.html">Image Studio</a>
+        <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+        <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="ABOUT.html">About</a>
+        <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+        <hr class="border-white/10 my-2">
+        <button class="text-left font-body-md text-on-surface-variant hover:text-primary transition-colors">Sign In</button>
+        <button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-body-md px-6 py-2 rounded-lg font-bold w-max">Get Started</button>
+    </div>
 </header>
+
 <!-- Main Content Canvas -->
 <main class="flex-grow pt-32 pb-24 px-margin-desktop max-w-container-max mx-auto w-full flex flex-col gap-24">
 <!-- Header Section: About & Mission -->
@@ -337,6 +354,7 @@
 </div>
 </section>
 </main>
+
 <!-- Footer (Shared Component) -->
 <footer class="bg-surface-container-lowest w-full border-t border-white/5 mt-auto">
 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
@@ -385,4 +403,17 @@
 </div>
 </div>
 </footer>
+
+<script>
+    function toggleMobileMenu() {
+        var menu = document.getElementById('mobile-menu');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            menu.classList.add('flex');
+        } else {
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+        }
+    }
+</script>
 </body></html>

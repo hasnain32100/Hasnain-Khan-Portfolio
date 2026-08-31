@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -268,10 +267,22 @@
 <span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[20px]">search</span>
 </div>
 <button class="text-on-surface-variant font-label-md hover:text-secondary transition-colors hidden md:block">Login</button>
-<button class="btn-primary px-6 py-2 rounded-full font-label-md">Get Started</button>
+<button class="btn-primary px-6 py-2 rounded-full font-label-md hidden md:block">Get Started</button>
+<button class="md:hidden text-on-surface flex items-center" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-3xl">menu</span></button>
 </div>
+</div>
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white/95 dark:bg-on-surface/95 backdrop-blur-md border-b border-outline-variant shadow-lg flex-col px-lg py-4 gap-4 z-50 md:hidden">
+    <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="about.html">About</a>
+    <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="courses details.html">Courses</a>
+    <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="instructors.html">Instructors</a>
+    <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="live classes.html">Live Classes</a>
+    <hr class="border-outline-variant my-2">
+    <button class="text-left font-label-md text-secondary">Login</button>
+    <button class="btn-primary text-white px-4 py-2 rounded-lg font-label-md w-max">Get Started</button>
 </div>
 </nav>
+
 <main class="max-w-container-max mx-auto px-4 md:px-lg py-lg">
 <!-- Hero Section -->
 <div class="bg-primary-container text-on-primary rounded-2xl p-6 md:p-xl mb-lg relative overflow-hidden shadow-interactive">
@@ -547,5 +558,17 @@
                 }
             });
         });
+
+        // Mobile Menu Toggle logic
+        function toggleMobileMenu() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
     </script>
 </body></html>

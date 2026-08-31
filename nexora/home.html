@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -326,12 +325,25 @@ void main() {
 <!-- Actions -->
 <div class="hidden md:flex items-center gap-4">
 <button class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-sm font-semibold tracking-wider uppercase">Sign In</button>
-<button class="btn-primary px-6 py-2.5 rounded-full font-label-sm font-semibold tracking-wider uppercase"><a href=cAI Chat.html>get started</a></button>
+<button class="btn-primary px-6 py-2.5 rounded-full font-label-sm font-semibold tracking-wider uppercase"><a href="AI Chat.html">get started</a></button>
 </div>
 <!-- Mobile Menu Toggle -->
-<button class="md:hidden text-on-surface-variant hover:text-primary">
+<button class="md:hidden text-on-surface-variant hover:text-primary" onclick="toggleMobileMenu()">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
+</div>
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-surface-dim/95 backdrop-blur-xl border-b border-white/10 shadow-2xl flex-col px-6 py-4 gap-4 z-50 md:hidden">
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="home.html">Home</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="AI Tools.html">AI Tools</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="AI Chat.html">AI Chat</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="image.html">Image Studio</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="ABOUT.html">About</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+    <hr class="border-white/10 my-2">
+    <button class="text-left font-body-md text-on-surface-variant hover:text-primary transition-colors">Sign In</button>
+    <button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-body-md px-6 py-2 rounded-lg font-bold w-max">Get Started</button>
 </div>
 </nav>
 <!-- Main Content Canvas -->
@@ -556,5 +568,16 @@ void main() {
             // Add scroll listener
             window.addEventListener('scroll', revealOnScroll);
         });
+
+        function toggleMobileMenu() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
     </script>
 </body></html>

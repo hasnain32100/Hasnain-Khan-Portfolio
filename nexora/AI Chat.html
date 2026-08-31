@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -126,11 +125,11 @@
 <body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-surface-dim/60 backdrop-blur-xl border-b border-white/10 shadow-2xl">
-<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20 hidden md:flex">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
 <div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">
                 NEXORA AI
             </div>
-<div class="flex items-center gap-8">
+<div class="hidden md:flex items-center gap-8">
 <a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-300" href="home.html">Home</a>
 <a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-300" href="AI Tools.html">AI Tools</a>
 <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md hover:text-primary transition-colors duration-300" href="AI Chat.html">AI Chat</a>
@@ -139,12 +138,29 @@
 <a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-300" href="ABOUT.html">About</a>
 <a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors duration-300" href="#">Contact</a>
 </div>
-<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-4">
 <button class="text-on-background font-body-md text-body-md px-4 py-2 hover:text-primary transition-colors duration-300 active:scale-95 transition-transform">Sign In</button>
 <button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-body-md text-body-md px-6 py-2 rounded-lg font-bold hover:shadow-[0_0_15px_rgba(165,231,255,0.3)] transition-all duration-300 active:scale-95 transition-transform">Get Started</button>
 </div>
+<button class="md:hidden text-primary flex items-center justify-center" onclick="toggleMobileMenu()">
+    <span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-surface-dim/95 backdrop-blur-xl border-b border-white/10 shadow-2xl flex-col px-6 py-4 gap-4 z-50 md:hidden">
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="home.html">Home</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="AI Tools.html">AI Tools</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="AI Chat.html">AI Chat</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="image.html">Image Studio</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="pricing.html">Pricing</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="ABOUT.html">About</a>
+    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+    <hr class="border-white/10 my-2">
+    <button class="text-left font-body-md text-on-surface-variant hover:text-primary transition-colors">Sign In</button>
+    <button class="bg-gradient-to-r from-primary to-secondary text-on-primary font-body-md px-6 py-2 rounded-lg font-bold w-max">Get Started</button>
 </div>
 </nav>
+
 <!-- Main Layout -->
 <main class="flex-grow flex pt-20 h-screen overflow-hidden">
 <!-- Sidebar -->
@@ -308,4 +324,17 @@
 </div>
 </div>
 </footer>
+
+<script>
+    function toggleMobileMenu() {
+        var menu = document.getElementById('mobile-menu');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            menu.classList.add('flex');
+        } else {
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+        }
+    }
+</script>
 </body></html>

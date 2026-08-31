@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -240,8 +239,23 @@
       <button class="btn-gradient text-white px-4 py-2 rounded-lg font-label-md">Get Started</button>
     </div>
   </div>
-  <div class="flex md:hidden justify-between items-center px-md py-4 w-full"><a href="index.html" class="font-headline-lg-mobile font-bold text-primary">Hasnain Academy</a><button><span class="material-symbols-outlined">menu</span></button></div>
+  <!-- Mobile Nav -->
+  <div class="flex md:hidden justify-between items-center px-md py-4 w-full">
+    <a href="index.html" class="font-headline-lg-mobile font-bold text-primary">Hasnain Academy</a>
+    <button onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-3xl">menu</span></button>
+  </div>
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white/95 dark:bg-on-surface/95 backdrop-blur-md border-b border-outline-variant shadow-lg flex-col px-lg py-4 gap-4 z-50 md:hidden">
+      <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="about.html">About</a>
+      <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="courses details.html">Courses</a>
+      <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="instructors.html">Instructors</a>
+      <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="live classes.html">Live Classes</a>
+      <hr class="border-outline-variant my-2">
+      <button class="text-left font-label-md text-secondary">Login</button>
+      <button class="btn-gradient text-white px-4 py-2 rounded-lg font-label-md w-max">Get Started</button>
+  </div>
 </nav>
+
 <!-- Main Content -->
 <main class="flex-grow mt-24">
 <div class="max-w-container-max mx-auto px-md md:px-lg py-lg">
@@ -449,5 +463,17 @@
             startTimer(9900, 'timer-1'); // 2h 45m
             startTimer(18930, 'timer-2'); // 5h 15m 30s
         };
+
+        // Mobile Menu Toggle logic
+        function toggleMobileMenu() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
     </script>
 </body></html>
