@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+          content="#0b1326">
+
+    <title>HASNAIN KHAN - Skills & Certifications</title>
+
+
+    <!-- =========================
+         TAILWIND CSS
+    ========================== -->
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:ital,wght@0,100..800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =========================
+         MATERIAL ICONS
+    ========================== -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =========================
+         TAILWIND CONFIG
+    ========================== -->
+
+    <script>
+
+        tailwind.config = {
+
+            darkMode: "class",
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        background: "#0b1326",
+
+                        surface: "#0b1326",
+
+                        "surface-container-lowest": "#060e20",
+
+                        "surface-container-low": "#131b2e",
+
+                        "surface-container": "#171f33",
+
+                        "surface-container-high": "#222a3d",
+
+                        "surface-container-highest": "#2d3449",
+
+                        "on-surface": "#dae2fd",
+
+                        "on-surface-variant": "#c1c6d7",
+
+                        primary: "#adc6ff",
+
+                        "primary-container": "#4b8eff",
+
+                        secondary: "#c0c1ff",
+
+                        tertiary: "#ffb595",
+
+                        outline: "#8b90a0"
+
+                    },
+
+                    fontFamily: {
+
+                        geist: ["Geist", "sans-serif"],
+
+                        inter: ["Inter", "sans-serif"],
+
+                        mono: ["JetBrains Mono", "monospace"]
+
+                    },
+
+                    spacing: {
+
+                        gutter: "24px",
+
+                        "section-gap": "100px"
+
+                    }
+
+                }
+
+            }
+
+        };
+
+    </script>
+
+
+    <!-- =========================
+         CUSTOM CSS
+    ========================== -->
+
+    <style>
+
+        :root {
+
+            --accent-1: #adc6ff;
+
+            --accent-2: #c0c1ff;
+
+            --accent-3: #ffb595;
+
+            --accent-cyan: #5eead4;
+
+        }
+
+
+        * {
+
+            box-sizing: border-box;
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            margin: 0;
+
+            position: relative;
+
+            overflow-x: hidden;
+
+        }
+
+
+        /* =========================
+           CURSOR GLOW
+        ========================= */
+
+        .cursor-glow {
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 450px;
+
+            height: 450px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(173, 198, 255, 0.12),
+                    transparent 70%
+                );
+
+            pointer-events: none;
+
+            transform: translate(-50%, -50%);
+
+            z-index: 1;
+
+        }
+
+
+        /* =========================
+           AMBIENT GLOWS
+        ========================= */
+
+        .ambient-glow {
+
+            position: fixed;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            z-index: -1;
+
+            opacity: 0.08;
+
+            filter: blur(60px);
+
+            background:
+                radial-gradient(
+                    circle,
+                    var(--accent-1),
+                    transparent 70%
+                );
+
+            animation: driftGlow 20s ease-in-out infinite;
+
+        }
+
+
+        .glow-2 {
+
+            background:
+                radial-gradient(
+                    circle,
+                    var(--accent-3),
+                    transparent 70%
+                );
+
+            animation-duration: 24s;
+
+            animation-direction: reverse;
+
+        }
+
+
+        @keyframes driftGlow {
+
+            0%,
+            100% {
+
+                transform:
+                    translate(0, 0)
+                    scale(1);
+
+            }
+
+
+            50% {
+
+                transform:
+                    translate(40px, -30px)
+                    scale(1.1);
+
+            }
+
+        }
+
+
+        /* =========================
+           GLASS PANEL (now with 3D tilt support)
+        ========================= */
+
+        .glass-panel {
+
+            background:
+                rgba(11, 19, 38, 0.75);
+
+            backdrop-filter:
+                blur(20px);
+
+            -webkit-backdrop-filter:
+                blur(20px);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.1);
+
+            position: relative;
+
+            overflow: hidden;
+
+            transform-style: preserve-3d;
+
+            perspective: 900px;
+
+            will-change: transform;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.4s ease,
+                border-color 0.4s ease;
+
+        }
+
+
+        .glass-panel:hover {
+
+            border-color:
+                rgba(173, 198, 255, 0.5);
+
+            box-shadow:
+                0 25px 70px
+                rgba(0, 0, 0, 0.35);
+
+        }
+
+        /* sheen sweep that follows the tilt */
+        .glass-panel::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(173,198,255,0.10), transparent 45%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glass-panel:hover::before {
+            opacity: 1;
+        }
+
+        .glass-panel > * {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        /* =========================
+           GRADIENT TEXT
+        ========================= */
+
+        .gradient-text {
+
+            background:
+                linear-gradient(
+                    100deg,
+                    var(--accent-1),
+                    var(--accent-2),
+                    var(--accent-3),
+                    var(--accent-1)
+                );
+
+            background-size: 300% auto;
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+
+            animation:
+                gradientShift 8s ease infinite;
+
+        }
+
+
+        @keyframes gradientShift {
+
+            0% {
+
+                background-position:
+                    0% 50%;
+
+            }
+
+
+            50% {
+
+                background-position:
+                    100% 50%;
+
+            }
+
+
+            100% {
+
+                background-position:
+                    0% 50%;
+
+            }
+
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .logo-shimmer {
+
+            background:
+                linear-gradient(
+                    110deg,
+                    var(--accent-1),
+                    white,
+                    var(--accent-1)
+                );
+
+            background-size: 250% auto;
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+
+            animation:
+                gradientShift 6s linear infinite;
+
+        }
+
+
+        /* =========================
+           SKILL ORBS (3D circular meters replacing flat bars)
+        ========================= */
+
+        .orb-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 10px;
+
+        }
+
+        .skill-orb {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 10px;
+
+            transform: translateZ(20px);
+
+        }
+
+        .orb-ring-wrap {
+
+            position: relative;
+
+            width: 84px;
+
+            height: 84px;
+
+            transition: transform 0.4s ease, filter 0.4s ease;
+
+        }
+
+        .skill-orb:hover .orb-ring-wrap {
+
+            transform: scale(1.08) rotateY(12deg);
+
+            filter: drop-shadow(0 6px 16px rgba(173, 198, 255, 0.35));
+
+        }
+
+        .orb-svg {
+
+            width: 100%;
+
+            height: 100%;
+
+            transform: rotate(-90deg);
+
+        }
+
+        .orb-track {
+
+            fill: none;
+
+            stroke: rgba(255, 255, 255, 0.08);
+
+            stroke-width: 8;
+
+        }
+
+        .orb-fill {
+
+            fill: none;
+
+            stroke-width: 8;
+
+            stroke-linecap: round;
+
+            stroke-dasharray: 226.19;
+
+            stroke-dashoffset: 226.19;
+
+            filter: drop-shadow(0 0 6px currentColor);
+
+            transition: stroke-dashoffset 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+        }
+
+        .orb-percent {
+
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-family: "Geist", sans-serif;
+
+            font-weight: 700;
+
+            font-size: 15px;
+
+            color: #eef2ff;
+
+        }
+
+        .orb-name {
+
+            font-size: 12px;
+
+            text-align: center;
+
+            color: var(--on-surface-variant, #c1c6d7);
+
+            line-height: 1.3;
+
+        }
+
+
+        /* =========================
+           TOOL CHIPS
+        ========================= */
+
+        .chip-decor {
+
+            transition:
+                transform 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+
+            transform-style: preserve-3d;
+
+        }
+
+
+        .chip-decor:hover {
+
+            transform:
+                translateY(-4px)
+                translateZ(10px)
+                rotateX(8deg);
+
+            background:
+                rgba(173, 198, 255, 0.12);
+
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+
+        }
+
+
+        /* =========================
+           REVEAL ANIMATION
+        ========================= */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(30px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+
+        }
+
+
+        .reveal.in-view {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+
+        }
+
+
+        /* =========================
+           SKILL ICON
+        ========================= */
+
+        .skill-icon {
+
+            transition:
+                transform 0.4s ease;
+
+        }
+
+
+        .glass-panel:hover .skill-icon {
+
+            transform:
+                scale(1.15)
+                rotate(-5deg);
+
+        }
+
+
+        /* =========================
+           MOBILE OPTIMIZATION
+        ========================= */
+
+        @media (max-width: 640px) {
+
+            .cursor-glow {
+
+                display: none;
+
+            }
+
+
+            .ambient-glow {
+
+                width: 300px;
+
+                height: 300px;
+
+            }
+
+
+            .glass-panel:hover {
+
+                transform: none !important;
+
+            }
+
+            .orb-ring-wrap {
+
+                width: 72px;
+
+                height: 72px;
+
+            }
+
+        }
+
+
+        /* =========================
+           REDUCED MOTION
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            * {
+
+                animation:
+                    none !important;
+
+                transition:
+                    none !important;
+
+            }
+
+        }
+
+
+        /* =========================================================
+           ADVANCED NAVIGATION SYSTEM (shared with contact.html / experience.html / projects.html)
+        ========================================================= */
+        nav.site-nav {
+            top: 14px;
+            left: 50%;
+            right: auto;
+            width: min(1180px, calc(100% - 28px));
+            height: 72px;
+            transform: translateX(-50%);
+            padding: 0 14px 0 20px;
+            border: 1px solid rgba(173,198,255,0.14);
+            border-radius: 22px;
+            background: rgba(8,15,31,0.72);
+            backdrop-filter: blur(24px) saturate(145%);
+            -webkit-backdrop-filter: blur(24px) saturate(145%);
+            box-shadow: 0 18px 55px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.05);
+            transition: top .35s ease, width .35s ease, height .35s ease, background .35s ease, box-shadow .35s ease, border-color .35s ease;
+        }
+        nav.site-nav.scrolled {
+            top: 9px;
+            height: 66px;
+            background: rgba(8,15,31,0.9);
+            border-color: rgba(125,211,252,0.2);
+            box-shadow: 0 20px 65px rgba(0,0,0,0.34), 0 0 35px rgba(75,142,255,0.08), inset 0 1px 0 rgba(255,255,255,0.06);
+        }
+        .nav-brand {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            min-width: max-content;
+        }
+        .nav-brand-mark {
+            position: relative;
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(125,211,252,.28);
+            border-radius: 12px;
+            background: linear-gradient(145deg, rgba(75,142,255,.18), rgba(125,211,252,.05));
+            box-shadow: 0 0 24px rgba(125,211,252,.08);
+            overflow: hidden;
+        }
+        .nav-brand-mark::before {
+            content: '';
+            position: absolute;
+            inset: 5px;
+            border: 1px dashed rgba(173,198,255,.22);
+            border-radius: 8px;
+            animation: nav-mark-spin 8s linear infinite;
+        }
+        .nav-brand-mark span {
+            position: relative;
+            z-index: 1;
+            font: 800 13px/1 'JetBrains Mono', monospace;
+            color: #adc6ff;
+        }
+        @keyframes nav-mark-spin { to { transform: rotate(360deg); } }
+        .nav-brand-copy { display:flex; flex-direction:column; gap:2px; }
+        .nav-brand-name { font: 800 17px/1 'Geist',sans-serif; letter-spacing:-.04em; color:#dae2fd; }
+        .nav-brand-role { font: 500 8px/1.2 'JetBrains Mono',monospace; letter-spacing:.16em; text-transform:uppercase; color:#7dd3fc; }
+        .nav-links-wrap {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            padding: 4px;
+            border: 1px solid rgba(255,255,255,.055);
+            border-radius: 15px;
+            background: rgba(255,255,255,.025);
+        }
+        .nav-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 12px;
+            border-radius: 11px;
+            color: #8f97ab;
+            font-size: 12px;
+            font-weight: 650;
+            letter-spacing: .01em;
+            text-decoration: none;
+            transition: color .25s ease, background .25s ease, transform .25s ease;
+        }
+        .nav-link::after { display:none; }
+        .nav-link .material-symbols-outlined { font-size: 17px; opacity:.72; transition: transform .25s ease, opacity .25s ease; }
+        .nav-link:hover { color:#dae2fd; background:rgba(255,255,255,.055); transform:translateY(-1px); }
+        .nav-link:hover .material-symbols-outlined { opacity:1; transform:scale(1.08); }
+        .nav-link.active-link { color:#eaf2ff; background:linear-gradient(135deg, rgba(75,142,255,.18), rgba(125,211,252,.07)); box-shadow:inset 0 0 0 1px rgba(125,211,252,.12), 0 5px 20px rgba(75,142,255,.08); }
+        .nav-link.active-link::before {
+            content:'';
+            position:absolute;
+            left:10px;
+            right:10px;
+            bottom:3px;
+            height:2px;
+            border-radius:99px;
+            background:linear-gradient(90deg,#adc6ff,#7dd3fc);
+            box-shadow:0 0 10px rgba(125,211,252,.65);
+        }
+        .nav-actions { display:flex; align-items:center; gap:7px; margin-left:auto; }
+        .nav-icon-btn {
+            width:40px;
+            height:40px;
+            display:grid;
+            place-items:center;
+            border:1px solid rgba(255,255,255,.08);
+            border-radius:12px;
+            background:rgba(255,255,255,.025);
+            color:#aeb6ca;
+            transition: .25s ease;
+        }
+        .nav-icon-btn:hover { color:#adc6ff; border-color:rgba(125,211,252,.2); background:rgba(125,211,252,.06); transform:translateY(-1px); }
+        .nav-cv {
+            position:relative;
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            height:40px;
+            padding:0 15px;
+            border-radius:12px;
+            color:#061027;
+            background:linear-gradient(135deg,#d8e2ff,#7dd3fc);
+            font-size:11px;
+            font-weight:800;
+            letter-spacing:.02em;
+            text-decoration:none;
+            box-shadow:0 8px 28px rgba(125,211,252,.13);
+            overflow:hidden;
+            transition:transform .25s ease, box-shadow .25s ease;
+        }
+        .nav-cv::after { content:''; position:absolute; inset:-80% 45% auto -20%; height:220%; transform:rotate(25deg); background:rgba(255,255,255,.5); transition:transform .55s ease; }
+        .nav-cv:hover { transform:translateY(-2px); box-shadow:0 12px 35px rgba(125,211,252,.22); }
+        .nav-cv:hover::after { transform:translateX(230%) rotate(25deg); }
+        .mobile-menu { top:92px; display:none; }
+        .mobile-menu.open { display:block; animation: mobileMenuIn 0.35s ease forwards; }
+        @keyframes mobileMenuIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .mobile-menu-inner { border-color:rgba(125,211,252,.16); background:rgba(7,14,29,.94); box-shadow:0 25px 70px rgba(0,0,0,.45), 0 0 35px rgba(75,142,255,.08); }
+        .mobile-menu a { display:flex; align-items:center; gap:12px; padding:14px 15px; }
+        .mobile-menu a .mobile-nav-icon { width:34px; height:34px; display:grid; place-items:center; border-radius:10px; background:rgba(255,255,255,.045); color:#7dd3fc; }
+        .mobile-menu a.active-mobile { color:#eaf2ff; background:linear-gradient(90deg,rgba(75,142,255,.14),transparent); }
+        .mobile-menu .mobile-cv { margin-top:5px; justify-content:center; color:#061027; background:linear-gradient(135deg,#d8e2ff,#7dd3fc); font-weight:800; }
+        .mobile-menu .mobile-cv .mobile-nav-icon { background:rgba(0,0,0,.08); color:#061027; }
+        @media (max-width: 1100px) {
+            nav.site-nav { width:min(100% - 24px, 980px); }
+            .nav-link { padding:9px 9px; }
+            .nav-link span:last-child { display:none; }
+            .nav-link .material-symbols-outlined { font-size:19px; }
+        }
+        @media (max-width: 767px) {
+            nav.site-nav { top:10px; width:calc(100% - 20px); height:62px !important; padding:0 9px 0 12px !important; border-radius:18px; }
+            nav.site-nav.scrolled { top:7px; }
+            .nav-brand-mark { width:34px; height:34px; border-radius:10px; }
+            .nav-brand-copy { display:none; }
+            .nav-actions { gap:5px; }
+            .nav-icon-btn { width:38px; height:38px; }
+            .nav-cv { display:none; }
+            .mobile-menu { top:82px; left:10px; right:10px; }
+            main { margin-top:72px !important; }
+        }
+
+        /* Navigation light theme */
+        html.light-theme body { background:#eef4ff !important; color:#12203b !important; }
+        html.light-theme nav.site-nav { background:rgba(246,250,255,.84); border-color:rgba(30,64,110,.14); box-shadow:0 16px 50px rgba(35,61,100,.14); }
+        html.light-theme .nav-brand-name { color:#12203b; }
+        html.light-theme .nav-brand-role, html.light-theme .nav-link:hover, html.light-theme .nav-link.active-link { color:#1759a8; }
+        html.light-theme .nav-links-wrap { background:rgba(30,64,110,.04); border-color:rgba(30,64,110,.08); }
+        html.light-theme .nav-link { color:#51627d; }
+        html.light-theme .nav-icon-btn { color:#435572; border-color:rgba(30,64,110,.12); background:rgba(30,64,110,.035); }
+        html.light-theme .mobile-menu-inner { background:rgba(246,250,255,.97); border-color:rgba(30,64,110,.12); }
+        html.light-theme .mobile-menu a { color:#435572; }
+        html.light-theme .mobile-menu a.active-mobile { color:#1759a8; background:rgba(75,142,255,.08); }
+
+    </style>
+
+</head>
+
+
+<body class="bg-background text-on-surface font-inter min-h-screen flex flex-col">
+
+
+    <!-- =========================
+         CURSOR GLOW
+    ========================== -->
+
+    <div id="cursorGlow"
+         class="cursor-glow">
+    </div>
+
+
+    <!-- =========================
+         AMBIENT BACKGROUND
+    ========================== -->
+
+    <div class="ambient-glow top-0 left-0"></div>
+
+    <div class="ambient-glow glow-2 bottom-0 right-0"></div>
+
+
+    <!-- =========================================================
+         TOP NAVIGATION (same nav bar as contact.html / experience.html / projects.html)
+    ========================================================== -->
+
+    <nav id="site-nav" class="site-nav fixed z-50 flex justify-between items-center" aria-label="Primary navigation">
+        <a class="nav-brand" href="index.html" aria-label="Hasnain Khan home">
+            <span class="nav-brand-mark" aria-hidden="true"><span>HK</span></span>
+            <span class="nav-brand-copy">
+                <span class="nav-brand-name">HASNAIN<span class="text-primary">.</span>KHAN</span>
+                <span class="nav-brand-role">Software Engineering</span>
+            </span>
+        </a>
+        <div class="nav-links-wrap hidden md:flex" id="desktop-nav-links">
+            <a data-page="index.html" class="nav-link" href="index.html"><span class="material-symbols-outlined">home</span><span>Home</span></a>
+            <a data-page="about.html" class="nav-link" href="about.html"><span class="material-symbols-outlined">person</span><span>About</span></a>
+            <a data-page="skills.html" class="nav-link" href="skills.html"><span class="material-symbols-outlined">code</span><span>Skills</span></a>
+            <a data-page="projects.html" class="nav-link" href="projects.html"><span class="material-symbols-outlined">layers</span><span>Projects</span></a>
+            <a data-page="experience.html" class="nav-link" href="experience.html"><span class="material-symbols-outlined">work_history</span><span>Experience</span></a>
+            <a data-page="contact.html" class="nav-link" href="contact.html"><span class="material-symbols-outlined">chat</span><span>Feedback</span></a>
+        </div>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="nav-icon-btn" type="button" aria-label="Toggle theme" title="Toggle theme">
+                <span id="theme-icon" class="material-symbols-outlined">dark_mode</span>
+            </button>
+            <a class="nav-cv btn-magnetic" href="Hasnain_Khan_CV.pdf" download="Hasnain_Khan_CV.pdf" aria-label="Download Hasnain Khan CV">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+                <span>Download CV</span>
+            </a>
+            <button id="mobile-menu-toggle" class="nav-icon-btn md:hidden" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span id="mobile-menu-icon" class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu md:hidden" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <a data-page="index.html" href="index.html"><span class="mobile-nav-icon material-symbols-outlined">home</span><span>Home</span></a>
+            <a data-page="about.html" href="about.html"><span class="mobile-nav-icon material-symbols-outlined">person</span><span>About</span></a>
+            <a data-page="skills.html" href="skills.html"><span class="mobile-nav-icon material-symbols-outlined">code</span><span>Skills</span></a>
+            <a data-page="projects.html" href="projects.html"><span class="mobile-nav-icon material-symbols-outlined">layers</span><span>Projects</span></a>
+            <a data-page="experience.html" href="experience.html"><span class="mobile-nav-icon material-symbols-outlined">work_history</span><span>Experience</span></a>
+            <a data-page="contact.html" href="contact.html"><span class="mobile-nav-icon material-symbols-outlined">chat</span><span>Feedback</span></a>
+            <a class="mobile-cv" href="Hasnain_Khan_CV.pdf" download="Hasnain_Khan_CV.pdf"><span class="mobile-nav-icon material-symbols-outlined">download</span><span>Download CV</span></a>
+        </div>
+    </div>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="flex-grow pt-28 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="text-center mb-16 sm:mb-24">
+
+            <p class="uppercase tracking-[0.3em] text-xs sm:text-sm text-primary mb-4">
+
+                CAPABILITIES
+
+            </p>
+
+
+            <h1 class="font-geist font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-5">
+
+                Technical
+
+                <span class="gradient-text">
+
+                    Expertise
+
+                </span>
+
+            </h1>
+
+
+            <p class="text-on-surface-variant text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+
+                A comprehensive breakdown of my proficiency in various
+                technologies, tools, and industry-standard certifications.
+
+            </p>
+
+        </header>
+
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section class="mb-20 sm:mb-28">
+
+            <h2 class="font-geist font-bold text-3xl sm:text-4xl mb-8">
+
+                Skill Proficiency
+
+            </h2>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6">
+
+
+                <!-- FRONTEND -->
+
+                <div class="reveal glass-panel rounded-xl p-5 sm:p-6 tilt-card">
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <span class="material-symbols-outlined skill-icon text-primary text-3xl">
+
+                            web
+
+                        </span>
+
+                        <h3 class="font-geist text-xl font-semibold">
+
+                            Frontend
+
+                        </h3>
+
+                    </div>
+
+
+                    <div class="orb-grid" style="color:#adc6ff;">
+
+                        <div class="skill-orb">
+                            <div class="orb-ring-wrap">
+                                <svg class="orb-svg" viewBox="0 0 84 84">
+                                    <circle class="orb-track" cx="42" cy="42" r="36"></circle>
+                                    <circle class="orb-fill" cx="42" cy="42" r="36" stroke="#adc6ff" data-target="90"></circle>
+                                </svg>
+                                <div class="orb-percent">90%</div>
+                            </div>
+                            <span class="orb-name">HTML/CSS</span>
+                        </div>
+
+                        <div class="skill-orb">
+                            <div class="orb-ring-wrap">
+                                <svg class="orb-svg" viewBox="0 0 84 84">
+                                    <circle class="orb-track" cx="42" cy="42" r="36"></circle>
+                                    <circle class="orb-fill" cx="42" cy="42" r="36" stroke="#adc6ff" data-target="85"></circle>
+                                </svg>
+                                <div class="orb-percent">85%</div>
+                            </div>
+                            <span class="orb-name">JavaScript</span>
+                        </div>
+
+                        <div class="skill-orb">
+                            <div class="orb-ring-wrap">
+                                <svg class="orb-svg" viewBox="0 0 84 84">
+                                    <circle class="orb-track" cx="42" cy="42" r="36"></circle>
+                                    <circle class="orb-fill" cx="42" cy="42" r="36" stroke="#adc6ff" data-target="95"></circle>
+                                </svg>
+                                <div class="orb-percent">95%</div>
+                            </div>
+                            <span class="orb-name">Python</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROGRAMMING -->
+
+                <div class="reveal glass-panel rounded-xl p-5 sm:p-6 tilt-card">
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <span class="material-symbols-outlined skill-icon text-tertiary text-3xl">
+
+                            code
+
+                        </span>
+
+                        <h3 class="font-geist text-xl font-semibold">
+
+                            Programming
+
+                        </h3>
+
+                    </div>
+
+
+                    <div class="orb-grid" style="color:#ffb595;">
+
+                        <div class="skill-orb">
+                            <div class="orb-ring-wrap">
+                                <svg class="orb-svg" viewBox="0 0 84 84">
+                                    <circle class="orb-track" cx="42" cy="42" r="36"></circle>
+                                    <circle class="orb-fill" cx="42" cy="42" r="36" stroke="#ffb595" data-target="80"></circle>
+                                </svg>
+                                <div class="orb-percent">80%</div>
+                            </div>
+                            <span class="orb-name">C++</span>
+                        </div>
+
+                        <div class="skill-orb">
+                            <div class="orb-ring-wrap">
+                                <svg class="orb-svg" viewBox="0 0 84 84">
+                                    <circle class="orb-track" cx="42" cy="42" r="36"></circle>
+                                    <circle class="orb-fill" cx="42" cy="42" r="36" stroke="#ffb595" data-target="90"></circle>
+                                </svg>
+                                <div class="orb-percent">90%</div>
+                            </div>
+                            <span class="orb-name">OOP</span>
+                        </div>
+
+                        <div class="skill-orb">
+                            <div class="orb-ring-wrap">
+                                <svg class="orb-svg" viewBox="0 0 84 84">
+                                    <circle class="orb-track" cx="42" cy="42" r="36"></circle>
+                                    <circle class="orb-fill" cx="42" cy="42" r="36" stroke="#ffb595" data-target="75"></circle>
+                                </svg>
+                                <div class="orb-percent">75%</div>
+                            </div>
+                            <span class="orb-name">DSA</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NETWORKING -->
+
+                <div class="reveal glass-panel rounded-xl p-5 sm:p-6 tilt-card">
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <span class="material-symbols-outlined skill-icon text-secondary text-3xl">
+
+                            router
+
+                        </span>
+
+                        <h3 class="font-geist text-xl font-semibold">
+
+                            Networking
+
+                        </h3>
+
+                    </div>
+
+
+                    <div class="orb-grid" style="color:#c0c1ff;">
+
+                        <div class="skill-orb">
+                            <div class="orb-ring-wrap">
+                                <svg class="orb-svg" viewBox="0 0 84 84">
+                                    <circle class="orb-track" cx="42" cy="42" r="36"></circle>
+                                    <circle class="orb-fill" cx="42" cy="42" r="36" stroke="#c0c1ff" data-target="85"></circle>
+                                </svg>
+                                <div class="orb-percent">85%</div>
+                            </div>
+                            <span class="orb-name">CCNA Concepts</span>
+                        </div>
+
+                        <div class="skill-orb">
+                            <div class="orb-ring-wrap">
+                                <svg class="orb-svg" viewBox="0 0 84 84">
+                                    <circle class="orb-track" cx="42" cy="42" r="36"></circle>
+                                    <circle class="orb-fill" cx="42" cy="42" r="36" stroke="#c0c1ff" data-target="95"></circle>
+                                </svg>
+                                <div class="orb-percent">95%</div>
+                            </div>
+                            <span class="orb-name">Network Config</span>
+                        </div>
+
+                        <div class="skill-orb">
+                            <div class="orb-ring-wrap">
+                                <svg class="orb-svg" viewBox="0 0 84 84">
+                                    <circle class="orb-track" cx="42" cy="42" r="36"></circle>
+                                    <circle class="orb-fill" cx="42" cy="42" r="36" stroke="#c0c1ff" data-target="90"></circle>
+                                </svg>
+                                <div class="orb-percent">90%</div>
+                            </div>
+                            <span class="orb-name">Troubleshooting</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TOOLS -->
+
+                <div class="reveal glass-panel rounded-xl p-5 sm:p-6 tilt-card">
+
+                    <div class="flex items-center gap-3 mb-6">
+
+                        <span class="material-symbols-outlined skill-icon text-primary-container text-3xl">
+
+                            build
+
+                        </span>
+
+                        <h3 class="font-geist text-xl font-semibold">
+
+                            Tools
+
+                        </h3>
+
+                    </div>
+
+
+                    <div class="flex flex-wrap gap-2">
+
+                        <span class="chip-decor bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-sm">
+
+                            Git
+
+                        </span>
+
+                        <span class="chip-decor bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-sm">
+
+                            GitHub
+
+                        </span>
+
+                        <span class="chip-decor bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-sm">
+
+                            VS Code
+
+                        </span>
+
+                        <span class="chip-decor bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-sm">
+
+                            Linux
+
+                        </span>
+
+                        <span class="chip-decor bg-white/5 border border-white/10 px-3 py-2 rounded-lg text-sm">
+
+                            Docker
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CERTIFICATIONS
+        ========================== -->
+
+        <section class="mb-20 sm:mb-28">
+
+            <h2 class="font-geist font-bold text-3xl sm:text-4xl mb-8">
+
+                Certifications
+
+            </h2>
+
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+
+
+                <!-- CERTIFICATE 1 -->
+
+                <div class="reveal glass-panel rounded-xl p-6 tilt-card">
+
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-5">
+
+                        <span class="material-symbols-outlined">
+
+                            workspace_premium
+
+                        </span>
+
+                    </div>
+
+
+                    <h3 class="font-geist font-semibold text-xl mb-2">
+
+                        IT Support Technician
+
+                    </h3>
+
+
+                    <p class="text-on-surface-variant text-sm mb-2">
+
+                        Alkhidmat Raazi Hospital Islamabad
+
+                    </p>
+
+
+                    <p class="text-outline text-xs">
+
+                        Issued: Oct 2025
+
+                    </p>
+
+
+                    <a href="#"
+                       class="inline-flex mt-6 text-primary font-semibold text-sm">
+
+                        Verify Credential
+
+                        <span class="material-symbols-outlined text-sm ml-2">
+
+                            arrow_outward
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- CERTIFICATE 2 -->
+
+                <div class="reveal glass-panel rounded-xl p-6 tilt-card">
+
+                    <div class="w-12 h-12 bg-tertiary/10 rounded-lg flex items-center justify-center text-tertiary mb-5">
+
+                        <span class="material-symbols-outlined">
+
+                            terminal
+
+                        </span>
+
+                    </div>
+
+
+                    <h3 class="font-geist font-semibold text-xl mb-2">
+
+                        C++ Professional
+
+                    </h3>
+
+
+                    <p class="text-on-surface-variant text-sm mb-2">
+
+                        C++ Institute
+
+                    </p>
+
+
+                    <p class="text-outline text-xs">
+
+                        Issued: Jan 2024
+
+                    </p>
+
+
+                    <a href="#"
+                       class="inline-flex mt-6 text-tertiary font-semibold text-sm">
+
+                        Verify Credential
+
+                        <span class="material-symbols-outlined text-sm ml-2">
+
+                            arrow_outward
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- CERTIFICATE 3 -->
+
+                <div class="reveal glass-panel rounded-xl p-6 tilt-card">
+
+                    <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary mb-5">
+
+                        <span class="material-symbols-outlined">
+
+                            language
+
+                        </span>
+
+                    </div>
+
+
+                    <h3 class="font-geist font-semibold text-xl mb-2">
+
+                        Web Development
+
+                    </h3>
+
+
+                    <p class="text-on-surface-variant text-sm mb-2">
+
+                        Bootcamp
+
+                    </p>
+
+
+                    <p class="text-outline text-xs">
+
+                        Issued: Aug 2026
+
+                    </p>
+
+
+                    <a href="#"
+                       class="inline-flex mt-6 text-secondary font-semibold text-sm">
+
+                        Verify Credential
+
+                        <span class="material-symbols-outlined text-sm ml-2">
+
+                            arrow_outward
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ACHIEVEMENTS
+        ========================== -->
+
+        <section class="reveal glass-panel rounded-xl p-6 sm:p-8 tilt-card">
+
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
+
+
+                <div class="text-center lg:text-left">
+
+                    <h2 class="font-geist font-bold text-3xl sm:text-4xl mb-3">
+
+                        Achievements
+
+                    </h2>
+
+
+                    <p class="text-on-surface-variant">
+
+                        Quantifiable milestones and programming results.
+
+                    </p>
+
+                </div>
+
+
+                <div class="grid grid-cols-3 gap-5 sm:gap-10">
+
+
+                    <div class="text-center">
+
+                        <div class="font-geist font-bold text-3xl sm:text-5xl text-primary">
+
+                            15+
+
+                        </div>
+
+                        <div class="text-xs sm:text-sm text-on-surface-variant mt-2">
+
+                            Hackathons
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="text-center">
+
+                        <div class="font-geist font-bold text-3xl sm:text-5xl text-tertiary">
+
+                            500+
+
+                        </div>
+
+                        <div class="text-xs sm:text-sm text-on-surface-variant mt-2">
+
+                            DSA Problems
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="text-center">
+
+                        <div class="font-geist font-bold text-3xl sm:text-5xl text-secondary">
+
+                            3
+
+                        </div>
+
+                        <div class="text-xs sm:text-sm text-on-surface-variant mt-2">
+
+                            Open Source PRs
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="border-t border-white/10 bg-surface-container-lowest py-10 sm:py-14">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+
+
+                <div class="logo-shimmer font-geist font-bold text-xl">
+
+                    HASNAIN KHAN
+
+                </div>
+
+
+                <p class="text-sm text-on-surface-variant">
+
+                    © 2026 HASNAIN KHAN Portfolio. Built with Precision.
+
+                </p>
+
+
+                <div class="flex flex-wrap justify-center gap-5 text-sm">
+
+                    <a href="#"
+                       class="text-on-surface-variant hover:text-primary">
+
+                        GitHub
+
+                    </a>
+
+                    <a href="#"
+                       class="text-on-surface-variant hover:text-primary">
+
+                        LinkedIn
+
+                    </a>
+
+                    <a href="#"
+                       class="text-on-surface-variant hover:text-primary">
+
+                        Twitter
+
+                    </a>
+
+                    <a href="#"
+                       class="text-on-surface-variant hover:text-primary">
+
+                        Email
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        /* =========================
+           CURSOR GLOW
+        ========================== */
+
+        if (window.innerWidth > 768) {
+
+            const glow =
+                document.getElementById("cursorGlow");
+
+            let targetX =
+                window.innerWidth / 2;
+
+            let targetY =
+                window.innerHeight / 2;
+
+            let currentX =
+                targetX;
+
+            let currentY =
+                targetY;
+
+
+            window.addEventListener(
+                "mousemove",
+                function (event) {
+
+                    targetX =
+                        event.clientX;
+
+                    targetY =
+                        event.clientY;
+
+                }
+            );
+
+
+            function animateGlow() {
+
+                currentX +=
+                    (targetX - currentX) * 0.08;
+
+                currentY +=
+                    (targetY - currentY) * 0.08;
+
+
+                glow.style.transform =
+                    `translate(${currentX}px, ${currentY}px)
+                    translate(-50%, -50%)`;
+
+
+                requestAnimationFrame(
+                    animateGlow
+                );
+
+            }
+
+
+            animateGlow();
+
+        }
+
+
+
+        /* =========================
+           SCROLL REVEAL + ORB METERS
+        ========================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const CIRC = 2 * Math.PI * 36; // r=36 -> ~226.19
+
+
+        const observer =
+            new IntersectionObserver(
+
+                function (entries) {
+
+                    entries.forEach(
+                        function (entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target.classList.add(
+                                    "in-view"
+                                );
+
+
+                                /* =========================
+                                   ORB RING METERS
+                                ========================== */
+
+                                const rings =
+                                    entry.target.querySelectorAll(
+                                        ".orb-fill"
+                                    );
+
+
+                                rings.forEach(
+                                    function (ring) {
+
+                                        const target =
+                                            parseFloat(
+                                                ring.getAttribute(
+                                                    "data-target"
+                                                )
+                                            ) || 0;
+
+                                        const offset =
+                                            CIRC - (target / 100) * CIRC;
+
+
+                                        setTimeout(
+                                            function () {
+
+                                                ring.style.strokeDashoffset =
+                                                    offset;
+
+                                            },
+                                            150
+                                        );
+
+                                    }
+                                );
+
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+
+                    threshold: 0.15
+
+                }
+
+            );
+
+
+        revealElements.forEach(
+            function (element) {
+
+                observer.observe(element);
+
+            }
+        );
+
+
+
+        /* =========================
+           FALLBACK
+        ========================== */
+
+        window.addEventListener(
+            "load",
+            function () {
+
+                document
+                    .querySelectorAll(
+                        ".orb-fill"
+                    )
+                    .forEach(
+                        function (ring) {
+
+                            const rect =
+                                ring.getBoundingClientRect();
+
+
+                            if (
+                                rect.top <
+                                window.innerHeight
+                            ) {
+
+                                const target =
+                                    parseFloat(
+                                        ring.getAttribute(
+                                            "data-target"
+                                        )
+                                    ) || 0;
+
+                                const offset =
+                                    CIRC - (target / 100) * CIRC;
+
+
+                                setTimeout(
+                                    function () {
+
+                                        ring.style.strokeDashoffset =
+                                            offset;
+
+                                    },
+                                    400
+                                );
+
+                            }
+
+                        }
+                    );
+
+            }
+        );
+
+
+
+        /* =========================
+           3D TILT ON GLASS PANELS
+        ========================== */
+
+        if (window.matchMedia("(hover: hover)").matches) {
+
+            document.querySelectorAll(".tilt-card").forEach(function (card) {
+
+                let rafId = null;
+
+                card.addEventListener("mousemove", function (e) {
+
+                    const rect = card.getBoundingClientRect();
+                    const px = (e.clientX - rect.left) / rect.width;
+                    const py = (e.clientY - rect.top) / rect.height;
+
+                    const rotateY = (px - 0.5) * 10;
+                    const rotateX = (0.5 - py) * 10;
+
+                    if (rafId) cancelAnimationFrame(rafId);
+
+                    rafId = requestAnimationFrame(function () {
+
+                        card.style.transform =
+                            `translateY(-6px) perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+                        card.style.setProperty("--mx", (px * 100) + "%");
+                        card.style.setProperty("--my", (py * 100) + "%");
+
+                    });
+
+                });
+
+                card.addEventListener("mouseleave", function () {
+
+                    if (rafId) cancelAnimationFrame(rafId);
+
+                    card.style.transform =
+                        "translateY(0) perspective(900px) rotateX(0deg) rotateY(0deg)";
+
+                });
+
+            });
+
+        }
+
+
+    </script>
+
+
+    <script>
+        // Advanced navigation behavior (same as contact.html / experience.html / projects.html)
+        (function () {
+            const nav = document.getElementById('site-nav');
+            if (!nav) return;
+
+            const normalize = value => {
+                const clean = (value || '').split('/').pop().split('?')[0].split('#')[0];
+                return clean || 'index.html';
+            };
+
+            const currentPage = normalize(window.location.pathname) || 'skills.html';
+            document.querySelectorAll('#desktop-nav-links [data-page], #mobile-menu [data-page]').forEach(link => {
+                const active = normalize(link.getAttribute('data-page')) === currentPage;
+                link.classList.toggle('active-link', active);
+                link.classList.toggle('active-mobile', active);
+                if (active) link.setAttribute('aria-current', 'page');
+                else link.removeAttribute('aria-current');
+            });
+
+            const updateNav = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+            updateNav();
+            window.addEventListener('scroll', updateNav, { passive: true });
+
+            const themeToggle = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+
+            if (themeToggle && themeIcon) {
+                let light = false;
+                try { light = localStorage.getItem('hkTheme') === 'light'; } catch (e) {}
+
+                const applyTheme = () => {
+                    document.documentElement.classList.toggle('light-theme', light);
+                    themeIcon.textContent = light ? 'light_mode' : 'dark_mode';
+                    themeToggle.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+                };
+
+                applyTheme();
+
+                themeToggle.addEventListener('click', () => {
+                    light = !light;
+                    try { localStorage.setItem('hkTheme', light ? 'light' : 'dark'); } catch (e) {}
+                    applyTheme();
+                });
+            }
+        })();
+
+        // Mobile navigation
+        (function () {
+            var toggle = document.getElementById('mobile-menu-toggle');
+            var menu = document.getElementById('mobile-menu');
+            var icon = document.getElementById('mobile-menu-icon');
+
+            if (!toggle || !menu || !icon) return;
+
+            function closeMenu() {
+                menu.classList.remove('open');
+                menu.setAttribute('aria-hidden', 'true');
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.setAttribute('aria-label', 'Open navigation menu');
+                icon.textContent = 'menu';
+            }
+
+            toggle.addEventListener('click', function () {
+                var isOpen = menu.classList.toggle('open');
+                menu.setAttribute('aria-hidden', String(!isOpen));
+                toggle.setAttribute('aria-expanded', String(isOpen));
+                toggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+                icon.textContent = isOpen ? 'close' : 'menu';
+            });
+
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeMenu);
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 768) closeMenu();
+            });
+        })();
+    </script>
+
+
+</body>
+
+</html>

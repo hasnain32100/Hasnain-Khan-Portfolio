@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexora AI - About &amp; Contact</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#2a2a2a",
+                    "outline": "#859399",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed": "#320046",
+                    "secondary-container": "#6e208c",
+                    "tertiary-fixed-dim": "#c6c4dc",
+                    "inverse-primary": "#00677f",
+                    "on-primary-container": "#00566a",
+                    "on-tertiary-fixed-variant": "#454559",
+                    "primary-container": "#00d2ff",
+                    "inverse-surface": "#e5e2e1",
+                    "secondary-fixed": "#f9d8ff",
+                    "on-secondary-container": "#e498ff",
+                    "surface-container-highest": "#353534",
+                    "on-primary": "#003543",
+                    "tertiary-container": "#c1bfd7",
+                    "on-primary-fixed": "#001f28",
+                    "on-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "background": "#131313",
+                    "on-tertiary-container": "#4e4d61",
+                    "surface-container-low": "#1c1b1b",
+                    "on-background": "#e5e2e1",
+                    "secondary": "#edb1ff",
+                    "tertiary-fixed": "#e3e0f9",
+                    "surface-variant": "#353534",
+                    "on-primary-fixed-variant": "#004e60",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed-dim": "#edb1ff",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#1a1a2b",
+                    "surface-tint": "#47d6ff",
+                    "on-secondary": "#520070",
+                    "on-secondary-fixed-variant": "#6e208c",
+                    "surface-container": "#201f1f",
+                    "on-surface-variant": "#bbc9cf",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#3c494e",
+                    "on-tertiary": "#2f2f41",
+                    "primary": "#a5e7ff",
+                    "tertiary": "#dddbf4",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e0e",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#47d6ff",
+                    "surface": "#131313",
+                    "primary-fixed": "#b6ebff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "margin-desktop": "64px",
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Montserrat"
+                    ],
+                    "headline-lg": [
+                            "Montserrat"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "display-lg-mobile": [
+                            "Montserrat"
+                    ],
+                    "display-lg": [
+                            "Montserrat"
+                    ]
+            },
+            "fontSize": {
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.5",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "display-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Custom UI Elements and Animations */
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-panel {
+            background: rgba(10, 10, 27, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-panel-hover:hover {
+            box-shadow: 0 0 20px rgba(165, 231, 255, 0.15);
+            border-color: rgba(165, 231, 255, 0.3);
+        }
+
+        /* Button Gradients */
+        .btn-primary {
+            background: linear-gradient(135deg, #a5e7ff, #edb1ff);
+            color: #003543;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 15px rgba(165, 231, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            border: 1px solid #00d2ff;
+            color: #a5e7ff;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+        .btn-ghost:hover {
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+            background: rgba(0, 210, 255, 0.1);
+        }
+
+        /* Input Styles */
+        .input-glass {
+            background: #000000;
+            border: 1px solid rgba(133, 147, 153, 0.3);
+            color: #e5e2e1;
+            transition: all 0.3s ease;
+        }
+        .input-glass:focus {
+            outline: none;
+            border-color: #00d2ff;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+            background: rgba(10, 10, 27, 0.8);
+            backdrop-filter: blur(16px);
+        }
+
+        /* Floating Label Setup */
+        .floating-label-group {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .floating-label-input {
+            width: 100%;
+            padding: 1rem 0.5rem 0.5rem;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(133, 147, 153, 0.5);
+            color: #e5e2e1;
+            transition: all 0.3s ease;
+        }
+        .floating-label-input:focus {
+            outline: none;
+            border-bottom-color: #00d2ff;
+            box-shadow: 0 4px 6px -4px rgba(0, 210, 255, 0.3);
+        }
+        .floating-label {
+            position: absolute;
+            left: 0.5rem;
+            top: 1rem;
+            color: #859399;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .floating-label-input:focus ~ .floating-label,
+        .floating-label-input:not(:placeholder-shown) ~ .floating-label {
+            top: -0.5rem;
+            font-size: 0.75rem;
+            color: #00d2ff;
+        }
+
+        /* Subtle Grid Pattern Background */
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Glowing Orbs for Background */
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+            animation: float 10s infinite ease-in-out alternate;
+        }
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, -50px) scale(1.1); }
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-background min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Background Ambience -->
+<div class="fixed inset-0 z-[-2] bg-grid-pattern"></div>
+<div class="glow-orb bg-primary/20 w-[500px] h-[500px] top-[-100px] left-[-100px]"></div>
+<div class="glow-orb bg-secondary/15 w-[600px] h-[600px] bottom-[-200px] right-[-100px]" style="animation-delay: -5s;"></div>
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface-dim/60 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 shadow-2xl">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<div class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">
+                NEXORA AI
+            </div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="home.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="AI Tools.html">AI Tools</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="AI Chat.html">AI Chat</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="image.html">Image Studio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="pricing.html">Pricing</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 transition-colors duration-300 font-body-md text-body-md" href="ABOUT.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-body-md text-body-md" href="">Contact</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="text-primary hover:text-primary transition-colors duration-300 font-body-md text-body-md active:scale-95 transition-transform hidden lg:block">
+                    Sign In
+                </button>
+<button class="btn-primary px-6 py-2 rounded-full font-label-sm text-label-sm font-semibold active:scale-95 transition-transform">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-24 px-margin-desktop max-w-container-max mx-auto w-full flex flex-col gap-24">
+<!-- Header Section: About & Mission -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center min-h-[614px]">
+<div class="flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 w-fit">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">psychiatry</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Our Genesis</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg-mobile text-on-surface">Architecting the <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Future of Intelligence</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Nexora AI was forged at the intersection of human creativity and machine precision. We build high-performance cognitive engines that empower creators, developers, and visionaries to transcend traditional limits.
+                </p>
+<div class="flex gap-4 mt-4">
+<button class="btn-ghost px-6 py-3 rounded-lg font-label-sm text-label-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">timeline</span>
+                        View Our Timeline
+                    </button>
+</div>
+</div>
+<div class="relative h-[400px] lg:h-[600px] rounded-xl overflow-hidden glass-panel flex items-center justify-center group">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/20 to-transparent opacity-50"></div>
+<img class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700 opacity-70 group-hover:opacity-100 group-hover:scale-105" data-alt="A highly detailed, futuristic cinematic shot of an abstract artificial intelligence core, composed of floating, glowing geometric shapes and intricate circuitry in a vast, dark tech-environment. Illuminated by bright electric blue and deep purple neon lights, representing data flow. The aesthetic is clean, ultra-modern, high-contrast dark mode SaaS style, exuding immense computational power and sleek sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhvukdV0mdSwEjff5zHsGoLwSEQl-K-_Pp_KlpQoDFlvpx_FkXgGx4LMpJZ_5iE1oqS7gws3o7VPa2ATM8Dz28awlAQJTxooU1y0m6rFJZra8GF1Rwn2Z6wAND5H6bUAbQJjbfjhvSZL5YQpnjEqHqegEZaek9RCndj7KvaoByy2Kngy2GrFb24zvTZiz8OH38uMUHeiLvRDL-u8lZk6fMLrVfQOMu7OnYN2JO_-oTdWWhMXEbx5w"/>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest w-full border-t border-white/5 mt-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto">
+<!-- Brand & Copyright -->
+<div class="col-span-2 lg:col-span-2 flex flex-col gap-4">
+<div class="font-headline-md text-headline-md font-bold text-primary">
+                    NEXORA AI
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-4">
+                    © 2024 NEXORA AI. Empowering the future with intelligence.
+                </p>
+</div>
+<!-- Links Group 1: Quick Links -->
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Quick Links</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Pricing</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Contact</a>
+</div>
+<!-- Links Group 2: Tool Links -->
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Tool Links</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">AI Tools</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">AI Chat</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Image Studio</a>
+</div>
+<!-- Links Group 3: Legal & Social -->
+<div class="col-span-2 flex flex-col gap-6">
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3 mt-4">
+<h4 class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2">Connect</h4>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-2xl">share</span>
+</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-2xl">mail</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Live Classes - Hasnain Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#89f5e7",
+                      "background": "#f7f9fb",
+                      "on-tertiary-fixed": "#00201d",
+                      "on-surface": "#191c1e",
+                      "on-primary-container": "#76849f",
+                      "secondary-container": "#708cfd",
+                      "outline": "#75777e",
+                      "surface-variant": "#e0e3e5",
+                      "surface-container": "#eceef0",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#173bab",
+                      "primary-fixed": "#d6e3ff",
+                      "on-surface-variant": "#44474d",
+                      "secondary-fixed": "#dde1ff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2d3133",
+                      "on-primary-fixed": "#0d1c32",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "inverse-primary": "#b9c7e4",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed-variant": "#005049",
+                      "outline-variant": "#c5c6cd",
+                      "on-primary-fixed-variant": "#39475f",
+                      "secondary-fixed-dim": "#b8c4ff",
+                      "surface-dim": "#d8dadc",
+                      "secondary": "#3755c3",
+                      "on-secondary-fixed": "#001453",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#6bd8cb",
+                      "tertiary": "#000000",
+                      "primary-container": "#0d1c32",
+                      "inverse-on-surface": "#eff1f3",
+                      "primary": "#000000",
+                      "surface-container-high": "#e6e8ea",
+                      "surface-container-low": "#f2f4f6",
+                      "on-tertiary-container": "#0c9488",
+                      "on-secondary-container": "#00217a",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-background": "#191c1e",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#515f78",
+                      "tertiary-container": "#00201d",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f7f9fb",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f7f9fb"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "24px",
+                      "lg": "40px",
+                      "sm": "12px",
+                      "xs": "4px",
+                      "base": "8px",
+                      "xl": "64px",
+                      "sidebar-width": "280px",
+                      "gutter": "24px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "display-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-md": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "30px",
+                              {
+                                      "lineHeight": "38px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #F8FAFC;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid #E2E8F0;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -4px rgba(10, 25, 47, 0.04);
+        }
+        .card-hover:hover {
+            box-shadow: 0 8px 30px -4px rgba(10, 25, 47, 0.08);
+            transform: translateY(-2px);
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, #3755c3 0%, #0c9488 100%);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+      </style>
+</head>
+<body class="font-body-md text-on-surface antialiased bg-background min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-outline-variant">
+  <div class="flex justify-between items-center px-lg py-4 w-full max-w-container-max mx-auto hidden md:flex">
+    <a href="index.html" class="font-headline-md text-headline-md font-bold text-primary">Hasnain Academy</a>
+    <div class="flex items-center gap-lg">
+      <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="about.html">About</a>
+      <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="courses details.html">Courses</a>
+      <a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors" href="instructors.html">Instructors</a>
+      <a class="font-body-md text-secondary font-bold border-b-2 border-secondary pb-1 transition-colors" href="live classes.html">Live Classes</a>
+    </div>
+    <div class="flex items-center gap-md">
+      <div class="relative"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span><input class="pl-10 pr-4 py-2 border border-surface-variant rounded-full bg-white focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary text-body-sm w-48" placeholder="Search..." type="text"></div>
+      <button class="font-label-md text-secondary border-2 border-secondary px-4 py-2 rounded-lg hover:bg-secondary/5">Login</button>
+      <button class="btn-gradient text-white px-4 py-2 rounded-lg font-label-md">Get Started</button>
+    </div>
+  </div>
+  <div class="flex md:hidden justify-between items-center px-md py-4 w-full"><a href="index.html" class="font-headline-lg-mobile font-bold text-primary">Hasnain Academy</a><button><span class="material-symbols-outlined">menu</span></button></div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow mt-24">
+<div class="max-w-container-max mx-auto px-md md:px-lg py-lg">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-lg gap-md">
+<div>
+<h2 class="font-display-md text-display-md text-on-surface mb-xs">Live Classes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Join interactive sessions and learn in real-time.</p>
+</div>
+<div class="flex gap-sm">
+<button class="glass-panel px-md py-sm rounded-lg font-label-md text-label-md text-secondary border border-outline-variant hover:bg-surface-variant transition-colors flex items-center gap-sm">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+                        Calendar View
+                    </button>
+</div>
+</div>
+<!-- Active Now Banner (Bento Grid Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-md mb-xl">
+<!-- Active Session -->
+<div class="lg:col-span-2 bg-white rounded-xl overflow-hidden card-shadow border border-outline-variant relative">
+<div class="absolute top-0 left-0 w-full h-1 btn-gradient"></div>
+<div class="p-lg flex flex-col md:flex-row gap-lg items-center">
+<div class="flex-1">
+<div class="flex items-center gap-sm mb-md">
+<span class="bg-error/10 text-error px-sm py-xs rounded-full font-label-sm text-label-sm flex items-center gap-xs">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+                                    LIVE NOW
+                                </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Computer Science 101</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Advanced Data Structures &amp; Algorithms</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Dive deep into graph traversal, dynamic programming, and complex data structures with real-world applications.</p>
+<div class="flex items-center gap-md mb-lg">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of an academic instructor in a modern well-lit university office. High resolution, 8k, photorealistic, wearing smart casual attire, smiling slightly, depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMs2blXtsA9s04xuyWz0X1foptwjGMWPIDAq4HX57OkpygXnFP2g5DIB38mkjpr3lwpmqwDOpHnoCTQcYi1ej7y7ffGn7exi-QDDUx1VvqOjkcbRzgDfzx681WvKIH0w5OXYcbrkrDzqbQhk9gvbsJUeMJ62qrE2kY68pluesuuBtCkLb1dC8BVbrw1ydqpiLMLGic_dZ7urkGgWJLP-30tEacHbbrbY9-jL2vwPw2R91phkHdp9ea"/>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Dr. Sarah Jenkins</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Senior Lecturer</p>
+</div>
+</div>
+<button class="btn-gradient w-full md:w-auto px-xl py-sm rounded-lg font-label-md text-label-md text-white hover:opacity-90 transition-opacity flex items-center justify-center gap-sm">
+                                Join Session
+                                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-64 h-48 bg-surface-variant rounded-lg relative overflow-hidden flex items-center justify-center">
+<!-- Placeholder for video feed graphic -->
+<img class="absolute inset-0 w-full h-full object-cover opacity-80" data-alt="A stylized digital illustration of a live streaming interface showing a teacher presenting a slide about data structures. Modern flat design aesthetic, cohesive with a premium academic portal, soft teal and blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK9iESuQQCpFnvNfRCVT8SMs_lg4VgHcumoESRaGO41vK0BYdcMa0XRUqFXr9x6FvrH0eHZp4BLyrwW5p4zhyzT8RsXJseiTdN9hwzgFfn0F-HkfwK_aiQ-5yYEZXc6dInjpzMW2PhkVnr8Y_9fOpLLaAEt9OdxNEBvEO-clW2NwzRO7rbvVdEUjBFR39VsrrI0pePQeV5U-u-OJ7Ai8PLchWxu0Vys4x8hDU7s42gL1Oc9JE7vnOu"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-5xl" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats/Calendar Snippet -->
+<div class="glass-panel rounded-xl p-md flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-md">Today's Schedule</h4>
+<ul class="space-y-sm">
+<li class="flex items-start gap-sm pb-sm border-b border-outline-variant/50">
+<div class="w-2 h-2 rounded-full bg-secondary mt-2"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Data Structures</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">10:00 AM - Live</p>
+</div>
+</li>
+<li class="flex items-start gap-sm pb-sm border-b border-outline-variant/50">
+<div class="w-2 h-2 rounded-full bg-outline-variant mt-2"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Web Development</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">2:00 PM</p>
+</div>
+</li>
+<li class="flex items-start gap-sm">
+<div class="w-2 h-2 rounded-full bg-outline-variant mt-2"></div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Machine Learning</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">4:30 PM</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="mt-md pt-md border-t border-outline-variant/50">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">Attendance</span>
+<span class="font-headline-sm text-headline-sm text-secondary">85%</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full mt-xs overflow-hidden">
+<div class="h-full btn-gradient rounded-full" style="width: 85%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Upcoming Classes Grid -->
+<h3 class="font-headline-md text-headline-md text-on-surface mb-md">Upcoming Sessions</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Class Card 1 -->
+<div class="bg-white rounded-xl p-md card-shadow card-hover transition-all duration-300 border border-outline-variant flex flex-col">
+<div class="flex justify-between items-start mb-md">
+<span class="bg-primary-fixed text-on-primary-fixed px-sm py-xs rounded-full font-label-sm text-label-sm">Web Dev</span>
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm text-secondary" id="timer-1">02:45:00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Starts In</span>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-sm flex-grow">Modern React Patterns</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md line-clamp-2">Learn advanced state management, custom hooks, and performance optimization in React applications.</p>
+<div class="flex items-center gap-sm mb-md pb-md border-b border-outline-variant/50">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A headshot of a young male web developer in a bright modern tech office. 8k, photorealistic, wearing a casual t-shirt, warm lighting, shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT5phFCsWKoYDv7PTbkvtaR8E1immK01X1qhqwz0KSZF5UW1RdUMjmA1GenddepIHN6a5K8piuRSrjsZ21cEiWIQfksAdsulcpDfwhn27-rjBrztiaoR8maG9ISEducEQ36-RFSRHgqEO7i8YUvPQRBSBWRAc9cTZ2TzUWFEfK9_hjYokXoHezz27JfA1J2g3FAX1guovH9eMpTSRht8yrxlwaO6wrLRi9DcRQJ04PN_y0yC8gizPR"/>
+<span class="font-label-md text-label-md text-on-surface">Alex Mercer</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+                            Today, 2:00 PM
+                        </span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-secondary-container transition-colors flex items-center gap-xs">
+                            Set Reminder
+                            <span class="material-symbols-outlined text-[18px]" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+<!-- Class Card 2 -->
+<div class="bg-white rounded-xl p-md card-shadow card-hover transition-all duration-300 border border-outline-variant flex flex-col">
+<div class="flex justify-between items-start mb-md">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-sm py-xs rounded-full font-label-sm text-label-sm">AI/ML</span>
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm text-secondary" id="timer-2">05:15:30</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Starts In</span>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-sm flex-grow">Introduction to Neural Networks</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md line-clamp-2">A comprehensive overview of foundational neural network architectures and their practical implementations.</p>
+<div class="flex items-center gap-sm mb-md pb-md border-b border-outline-variant/50">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A portrait of a female data scientist in a modern lab environment. 8k, photorealistic, wearing smart glasses, soft blue and teal ambient lighting, highly detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBnETLq1-xN43-nZ0c9TKH8y-lQL-GU4KoLg-MJShvmhLtHIq1bhZ-uAnzXlJneRhTangGNZTJSpml5YOOfa_Kg2iOl35f2OySL_7xsQZbtyU8fHv8AgiYwLZSOnRoKEvQ0pBsxslcyk9KngRLXdJGaLLPuHGa7oTxHeczUavYO0F57gvkU0AKHfCCm4F-smawxWpKpNiYqQ0o_aIoKudW3wku-KgUoQkdGwWTqOwkkE_5ZGrX8bIZ"/>
+<span class="font-label-md text-label-md text-on-surface">Dr. Emily Chen</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule">schedule</span>
+                            Today, 4:30 PM
+                        </span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-secondary-container transition-colors flex items-center gap-xs">
+                            Set Reminder
+                            <span class="material-symbols-outlined text-[18px]" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+<!-- Class Card 3 -->
+<div class="bg-white rounded-xl p-md card-shadow card-hover transition-all duration-300 border border-outline-variant flex flex-col">
+<div class="flex justify-between items-start mb-md">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-sm py-xs rounded-full font-label-sm text-label-sm">Design</span>
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">Tomorrow</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10:00 AM</span>
+</div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-sm flex-grow">UI/UX: Advanced Prototyping</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md line-clamp-2">Mastering high-fidelity interactions and complex component states in modern design tools.</p>
+<div class="flex items-center gap-sm mb-md pb-md border-b border-outline-variant/50">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A creative headshot of a male designer in a stylish studio workspace. 8k, photorealistic, artistic warm lighting, modern minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBvEJ9e3TzglRemtRI08919lw4C1df-cGjcCVRC6wanleFBFKntMKZYJwVPiholrFIu4UTR-flWFdGbJsDxgTxlD67k1RsUgMMeJAgqko2WkIW-41uxOsOpyY_hcblk1KZWgPnVkUSfMnlER-FAcVtIUGWPMB6_ern_tT-xA1X3hSMzJ2zIEaR5kK2YQ0q_u7QaapA309CapJ0FZFNjhW5SB5TgBeGJS62gYIdNAuVzrWyb4R1M3N5"/>
+<span class="font-label-md text-label-md text-on-surface">Marcus Thorne</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" data-icon="event">event</span>
+                            Oct 25, 2024
+                        </span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-secondary-container transition-colors flex items-center gap-xs">
+                            Set Reminder
+                            <span class="material-symbols-outlined text-[18px]" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="w-full mt-lg bg-surface-container-highest text-primary font-body-sm border-t border-outline-variant"><div class="grid grid-cols-1 md:grid-cols-2 gap-lg px-lg py-xl max-w-container-max mx-auto"><div><span class="font-headline-sm font-black">Hasnain Academy</span><p class="text-on-surface-variant mt-2">© 2026 Hasnain Academy. Learn Today. Lead Tomorrow.</p></div><div class="flex flex-wrap gap-lg md:justify-end"><a class="text-on-surface-variant hover:text-secondary" href="about.html">About</a><a class="text-on-surface-variant hover:text-secondary" href="courses details.html">Courses</a><a class="text-on-surface-variant hover:text-secondary" href="instructors.html">Instructors</a><a class="text-on-surface-variant hover:text-secondary" href="live classes.html">Live Classes</a></div></div></footer>
+<script>
+        // Simple countdown timer logic for demonstration
+        function startTimer(duration, displayElementId) {
+            let timer = duration, hours, minutes, seconds;
+            const display = document.getElementById(displayElementId);
+            
+            if(!display) return;
+
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration; // Reset for demo purposes
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            // Start mock timers
+            startTimer(9900, 'timer-1'); // 2h 45m
+            startTimer(18930, 'timer-2'); // 5h 15m 30s
+        };
+    </script>
+</body></html>

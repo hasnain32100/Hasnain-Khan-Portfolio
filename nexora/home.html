@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexora AI - Create Beyond Intelligence</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "outline": "#859399",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#320046",
+                        "secondary-container": "#6e208c",
+                        "tertiary-fixed-dim": "#c6c4dc",
+                        "inverse-primary": "#00677f",
+                        "on-primary-container": "#00566a",
+                        "on-tertiary-fixed-variant": "#454559",
+                        "primary-container": "#00d2ff",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary-fixed": "#f9d8ff",
+                        "on-secondary-container": "#e498ff",
+                        "surface-container-highest": "#353534",
+                        "on-primary": "#003543",
+                        "tertiary-container": "#c1bfd7",
+                        "on-primary-fixed": "#001f28",
+                        "on-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "background": "#131313",
+                        "on-tertiary-container": "#4e4d61",
+                        "surface-container-low": "#1c1b1b",
+                        "on-background": "#e5e2e1",
+                        "secondary": "#edb1ff",
+                        "tertiary-fixed": "#e3e0f9",
+                        "surface-variant": "#353534",
+                        "on-primary-fixed-variant": "#004e60",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed-dim": "#edb1ff",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1a1a2b",
+                        "surface-tint": "#47d6ff",
+                        "on-secondary": "#520070",
+                        "on-secondary-fixed-variant": "#6e208c",
+                        "surface-container": "#201f1f",
+                        "on-surface-variant": "#bbc9cf",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#3c494e",
+                        "on-tertiary": "#2f2f41",
+                        "primary": "#a5e7ff",
+                        "tertiary": "#dddbf4",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0e0e0e",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#47d6ff",
+                        "surface": "#131313",
+                        "primary-fixed": "#b6ebff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-desktop": "64px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #e5e2e1;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background-color: rgba(10, 10, 27, 0.6);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card-hover {
+            transition: all 0.4s ease;
+        }
+
+        .glass-card-hover:hover {
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.15);
+            transform: translateY(-4px);
+            border-top-color: rgba(0, 210, 255, 0.3);
+            border-left-color: rgba(0, 210, 255, 0.3);
+        }
+
+        .text-gradient-primary {
+            background: linear-gradient(to right, #a5e7ff, #edb1ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #a5e7ff 0%, #edb1ff 100%);
+            color: #131313;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 0 20px rgba(165, 231, 255, 0.4);
+            transform: scale(1.02);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border: 1px solid #00d2ff;
+            color: #a5e7ff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-ghost:hover {
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.2) inset, 0 0 15px rgba(0, 210, 255, 0.2);
+            background-color: rgba(0, 210, 255, 0.05);
+        }
+        
+        .ai-pulse {
+            position: relative;
+        }
+        .ai-pulse::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            border-radius: inherit;
+            background: linear-gradient(45deg, #00d2ff, #edb1ff, #00d2ff);
+            z-index: -1;
+            animation: pulse-glow 3s linear infinite;
+            opacity: 0.5;
+            filter: blur(8px);
+        }
+        
+        @keyframes pulse-glow {
+            0% { opacity: 0.3; filter: blur(8px); }
+            50% { opacity: 0.7; filter: blur(12px); }
+            100% { opacity: 0.3; filter: blur(8px); }
+        }
+
+        /* Scroll Reveal Utility */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-background min-h-screen flex flex-col relative antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Ambient Background Shader -->
+<div class="fixed inset-0 z-[-1] pointer-events-none opacity-40">
+<!-- STITCH_SHADER_START:ANIMATION_3 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_3" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_3');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+    float time = u_time * 0.2;
+    
+    // Create a flowing, multi-layered gradient
+    vec3 color1 = vec3(0.02, 0.02, 0.1); // Deep Navy
+    vec3 color2 = vec3(0.0, 0.82, 1.0);  // Electric Blue
+    vec3 color3 = vec3(0.61, 0.31, 0.73); // Purple
+    
+    float noise1 = sin(uv.x * 3.0 + time) * 0.5 + 0.5;
+    float noise2 = cos(uv.y * 2.0 - time * 1.5) * 0.5 + 0.5;
+    
+    vec3 color = mix(color1, color2, noise1 * 0.3);
+    color = mix(color, color3, noise2 * 0.2);
+    
+    // Add glowing "particles" or spots
+    float dist = length(uv - (u_mouse / u_resolution));
+    float glow = smoothstep(0.3, 0.0, dist) * 0.15;
+    color += color2 * glow;
+
+    // Darken overall for a premium feel
+    color *= 0.8;
+    
+    gl_FragColor = vec4(color, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_3 -->
+</div>
+<!-- TopNavBar -->
+<nav class="bg-surface-dim/60 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 shadow-2xl">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-20 md:px-margin-desktop px-margin-mobile">
+<!-- Brand -->
+<div class="flex items-center gap-4 cursor-pointer group">
+<img alt="NEXORA AI Logo" class="h-10 w-10 rounded-DEFAULT object-cover group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8lgN-k4ajiLmn4DWLczZviqRRPPrYcqTP3USrVXr24eroUCiYbrW_P6Vnql6Y58WmnYzDnm3abTXEYlKhSh9stS3urLlMh8fO7esth5lsuuHxCo2CXBB7PiCg1Mi-BWVKXNdzi09fMWgFVN8pB6dLmfnq-P6KTkTF2ZQvhxpRklYSgl9Nm57FlXGqih-kTamBg1emxllG6qgmh4c2kxDrZ8-p6noSRpvsxqskIp-cpSicECf_KPs"/>
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter group-hover:text-primary-container transition-colors">NEXORA AI</span>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 active:scale-95 transition-transform" href="home.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="AI Tools.html">AI Tools</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="AI Chat.html">AI Chat</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="image.html">Image Studio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="pricing.html">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="ABOUT.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="#">Contact</a>
+</div>
+<!-- Actions -->
+<div class="hidden md:flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-sm font-semibold tracking-wider uppercase">Sign In</button>
+<button class="btn-primary px-6 py-2.5 rounded-full font-label-sm font-semibold tracking-wider uppercase"><a href=cAI Chat.html>get started</a></button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col gap-24 lg:gap-32">
+<!-- Hero Section -->
+<section class="min-h-[70vh] flex flex-col justify-center items-center text-center relative reveal mt-12">
+<!-- Decorative Glow Behind Hero -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-primary-container/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel mb-8 border border-primary/20">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-primary uppercase tracking-widest">Nexora v4.0 is Live</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-on-surface max-w-4xl mb-6">
+                Create Beyond <br/><span class="text-gradient-primary">Intelligence</span>
+</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                Empowering the future with next-gen AI. Build, generate, and converse with unprecedented speed and precision in a unified cognitive environment.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="btn-primary px-8 py-4 rounded-full font-label-sm uppercase tracking-widest flex items-center justify-center gap-2 group">
+                    Get Started
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="btn-ghost px-8 py-4 rounded-full font-label-sm uppercase tracking-widest flex items-center justify-center gap-2">
+                    Explore Tools
+                </button>
+</div>
+</section>
+<!-- Platform Intro (Glassmorphic Bento) -->
+<section class="reveal">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Main Vision Panel -->
+<div class="lg:col-span-8 glass-panel rounded-xl p-10 relative overflow-hidden group glass-card-hover">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl group-hover:bg-secondary-container/30 transition-colors"></div>
+<h2 class="font-headline-lg text-on-surface mb-4 relative z-10">Cognitive Architecture. <br/>Redefined.</h2>
+<p class="font-body-lg text-on-surface-variant max-w-xl relative z-10">
+                        Nexora's vision is to dissolve the barrier between human intent and machine execution. Our unified platform synthesizes generative text, image creation, and complex data analysis into a seamless, high-velocity workflow.
+                    </p>
+</div>
+<!-- Secondary Panel -->
+<div class="lg:col-span-4 glass-panel rounded-xl p-8 flex flex-col justify-center items-center text-center glass-card-hover group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-6 ai-pulse group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-2">Ultra-Low Latency</h3>
+<p class="text-on-surface-variant">Real-time processing powered by localized neural networks.</p>
+</div>
+</div>
+</section>
+<!-- Featured Tools -->
+<section class="reveal">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<h2 class="font-headline-lg text-on-surface mb-2">Ecosystem of Intelligence</h2>
+<p class="font-body-lg text-on-surface-variant">Professional-grade tools built for the demanding creator.</p>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm uppercase tracking-widest flex items-center gap-1 transition-colors">
+                    View All Models <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Tool Card 1 -->
+<div class="glass-panel rounded-xl p-8 flex flex-col h-full glass-card-hover relative group cursor-pointer overflow-hidden">
+<div class="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">forum</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-white/5 flex items-center justify-center mb-6 z-10">
+<span class="material-symbols-outlined text-primary">chat</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-3 z-10">Nexus Chat</h3>
+<p class="text-on-surface-variant mb-6 flex-grow z-10">Advanced conversational AI with infinite context memory and semantic reasoning capabilities.</p>
+<div class="flex items-center justify-between border-t border-white/10 pt-4 z-10">
+<span class="font-label-sm text-on-surface-variant uppercase">GPT-4 Turbo / Claude 3</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">east</span>
+</div>
+</div>
+<!-- Tool Card 2 -->
+<div class="glass-panel rounded-xl p-8 flex flex-col h-full glass-card-hover relative group cursor-pointer overflow-hidden">
+<div class="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-secondary">palette</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-white/5 flex items-center justify-center mb-6 z-10">
+<span class="material-symbols-outlined text-secondary">image</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-3 z-10">Vision Studio</h3>
+<p class="text-on-surface-variant mb-6 flex-grow z-10">Generate photorealistic images and complex digital art with unparalleled structural fidelity.</p>
+<div class="flex items-center justify-between border-t border-white/10 pt-4 z-10">
+<span class="font-label-sm text-on-surface-variant uppercase">Midjourney V6 / DALL-E 3</span>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform">east</span>
+</div>
+</div>
+<!-- Tool Card 3 -->
+<div class="glass-panel rounded-xl p-8 flex flex-col h-full glass-card-hover relative group cursor-pointer overflow-hidden">
+<div class="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary-container">data_object</span>
+</div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-white/5 flex items-center justify-center mb-6 z-10">
+<span class="material-symbols-outlined text-primary-container">code</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-3 z-10">Code Synthesizer</h3>
+<p class="text-on-surface-variant mb-6 flex-grow z-10">Full-stack application generation, automated debugging, and architecture optimization.</p>
+<div class="flex items-center justify-between border-t border-white/10 pt-4 z-10">
+<span class="font-label-sm text-on-surface-variant uppercase">Auto-Refactoring Engine</span>
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">east</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="reveal">
+<div class="glass-panel rounded-2xl p-12 md:p-16 border-t border-b border-white/10 bg-surface-container-lowest/40 flex flex-col md:flex-row justify-around items-center gap-12 text-center relative overflow-hidden">
+<!-- Background decorative lines -->
+<div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+<div class="relative z-10">
+<div class="font-display-lg text-gradient-primary mb-2">10M+</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Active Users</div>
+</div>
+<div class="hidden md:block w-px h-24 bg-white/10 relative z-10"></div>
+<div class="relative z-10">
+<div class="font-display-lg text-gradient-primary mb-2">500+</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">AI Models Integrated</div>
+</div>
+<div class="hidden md:block w-px h-24 bg-white/10 relative z-10"></div>
+<div class="relative z-10">
+<div class="font-display-lg text-gradient-primary mb-2">24/7</div>
+<div class="font-label-sm text-on-surface-variant uppercase tracking-widest">Continuous Processing</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="reveal pb-12">
+<div class="glass-panel rounded-2xl p-12 lg:p-20 text-center relative overflow-hidden ai-pulse border border-primary/30">
+<!-- Inner Glow -->
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
+<h2 class="font-display-lg-mobile md:font-headline-lg text-on-surface mb-6 relative z-10">Join the Intelligence Revolution.</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 relative z-10">Experience the bleeding edge of AI technology. Start building the future today with Nexora's comprehensive suite of intelligent tools.</p>
+<div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
+<button class="btn-primary px-8 py-4 rounded-full font-label-sm uppercase tracking-widest">
+                        Start Free Trial
+                    </button>
+<button class="btn-ghost px-8 py-4 rounded-full font-label-sm uppercase tracking-widest">
+                        Contact Enterprise
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full border-t border-white/5 relative z-10">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter px-margin-desktop py-16 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Brand Column -->
+<div class="col-span-2 md:col-span-4 lg:col-span-2 flex flex-col gap-4">
+<div class="font-headline-md text-headline-md font-bold text-primary">NEXORA AI</div>
+<p class="text-on-surface-variant font-body-md">Empowering the future with intelligence.</p>
+<div class="mt-4 text-on-surface-variant font-body-md opacity-60">
+                    © 2024 NEXORA AI. All rights reserved.
+                </div>
+</div>
+<!-- Quick Links -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-sm text-on-surface uppercase tracking-widest mb-2">Quick Links</h4>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">Pricing</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">Careers</a>
+</div>
+<!-- Tool Links -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-sm text-on-surface uppercase tracking-widest mb-2">Tool Links</h4>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">AI Chat</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">Image Studio</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">API Docs</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">Status</a>
+</div>
+<!-- Legal -->
+<div class="flex flex-col gap-4">
+<h4 class="font-label-sm text-on-surface uppercase tracking-widest mb-2">Legal</h4>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all font-body-md" href="#">Cookie Policy</a>
+</div>
+<!-- Newsletter / Social -->
+<div class="col-span-2 md:col-span-4 lg:col-span-1 flex flex-col gap-4">
+<h4 class="font-label-sm text-on-surface uppercase tracking-widest mb-2">Connect</h4>
+<div class="flex gap-4 mb-4">
+<!-- Social Placeholders -->
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors border border-white/5 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">language</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-colors border border-white/5 text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+<h4 class="font-label-sm text-on-surface uppercase tracking-widest mb-2">Newsletter</h4>
+<div class="flex flex-col gap-2">
+<input class="bg-black border border-white/10 rounded-lg px-4 py-2 text-on-surface font-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Enter your email" type="email"/>
+<button class="btn-primary py-2 rounded-lg font-label-sm uppercase tracking-widest text-sm">Subscribe</button>
+</div>
+</div>
+</div>
+</footer>
+<!-- Simple Scroll Reveal Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            
+            // Initial check
+            revealOnScroll();
+            
+            // Add scroll listener
+            window.addEventListener('scroll', revealOnScroll);
+        });
+    </script>
+</body></html>
