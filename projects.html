@@ -775,6 +775,12 @@
 
         .card-image {
 
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            background: linear-gradient(135deg, rgba(173,198,255,0.10), rgba(255,181,149,0.06));
+
             transition:
                 transform 0.6s
                 cubic-bezier(
@@ -797,6 +803,41 @@
             filter:
                 saturate(1.15)
                 brightness(1.05);
+
+        }
+
+
+        /* Fallback shown when an image fails to load (bad path / 404) */
+        .image-fallback {
+
+            width: 100%;
+            height: 100%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 6px;
+            background: linear-gradient(135deg, rgba(173,198,255,0.10), rgba(255,181,149,0.06));
+            color: #8b90a0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            text-align: center;
+            padding: 8px;
+
+        }
+
+
+        .project-image-wrapper.img-error .card-image {
+
+            display: none;
+
+        }
+
+
+        .project-image-wrapper.img-error .image-fallback {
+
+            display: flex;
 
         }
 
@@ -1798,11 +1839,19 @@
                 <!-- IMAGE -->
 
                 <div
-                    class="project-image-wrapper w-full h-48 border-b border-white/10 overflow-hidden">
+                    class="project-image-wrapper w-full h-48 border-b border-white/10 overflow-hidden relative">
 
-                    <div
-                        class="card-image bg-cover bg-center w-full h-full"
-                        style="background-image:url('university/abc.png')">
+                    <img
+                        class="card-image"
+                        src="university/abc.png"
+                        alt="University Management System preview"
+                        loading="lazy"
+                        decoding="async"
+                        onerror="this.closest('.project-image-wrapper').classList.add('img-error')">
+
+                    <div class="image-fallback">
+                        <span class="material-symbols-outlined" style="font-size:26px;">image_not_supported</span>
+                        <span>Preview unavailable</span>
                     </div>
 
                 </div>
@@ -1904,11 +1953,19 @@
                 <!-- IMAGE -->
 
                 <div
-                    class="project-image-wrapper w-full h-48 border-b border-white/10 overflow-hidden">
+                    class="project-image-wrapper w-full h-48 border-b border-white/10 overflow-hidden relative">
 
-                    <div
-                        class="card-image bg-cover bg-center w-full h-full"
-                        style="background-image:url('academy/def.png')">
+                    <img
+                        class="card-image"
+                        src="Academy/def.png"
+                        alt="Learning Management System preview"
+                        loading="lazy"
+                        decoding="async"
+                        onerror="this.closest('.project-image-wrapper').classList.add('img-error')">
+
+                    <div class="image-fallback">
+                        <span class="material-symbols-outlined" style="font-size:26px;">image_not_supported</span>
+                        <span>Preview unavailable</span>
                     </div>
 
                 </div>
@@ -2010,11 +2067,19 @@
                 <!-- IMAGE -->
 
                 <div
-                    class="project-image-wrapper w-full h-48 border-b border-white/10 overflow-hidden">
+                    class="project-image-wrapper w-full h-48 border-b border-white/10 overflow-hidden relative">
 
-                    <div
-                        class="card-image bg-cover bg-center w-full h-full"
-                        style="background-image:url('nexora/logo.png')">
+                    <img
+                        class="card-image"
+                        src="nexora/logo.png"
+                        alt="Nexora AI Platform preview"
+                        loading="lazy"
+                        decoding="async"
+                        onerror="this.closest('.project-image-wrapper').classList.add('img-error')">
+
+                    <div class="image-fallback">
+                        <span class="material-symbols-outlined" style="font-size:26px;">image_not_supported</span>
+                        <span>Preview unavailable</span>
                     </div>
 
                 </div>
